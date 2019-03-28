@@ -46,7 +46,7 @@
       return {
         activeTab: '',
         activeQuestionIndex: null,
-        showAccordion: true
+        showAccordion: false
       }
     },
     props: {
@@ -108,7 +108,7 @@
         const uniqueCategories = this.items
           .map(item => item[this.tabName])
           .filter((category, index, categories) => categories.indexOf(category) === index)
-        this.activeTab = uniqueCategories[0]
+        // this.activeTab = uniqueCategories[0] // do not set the first category to active
         return uniqueCategories
       },
       categoryItems () {
@@ -141,15 +141,21 @@
             : null
         ]
       },
-      makeActiveCategory (category) {
-        if (this.activeTab === category) return
-
-        this.showAccordion = false
+      toggleAccordion (category) {
         this.activeTab = category
         this.activeQuestionIndex = null
         setTimeout( () => {
-          this.showAccordion = true
+          this.showAccordion = !this.showAccordion
         }, 300 )
+
+      },
+      makeActiveCategory (category) {
+        if (this.activeTab === category) { 
+          this.showAccordion = false
+          this.activeTab = ''
+          return
+        }
+        return this.toggleAccordion(category) 
       },
       generateCategoryClasses (category) {
         return [
