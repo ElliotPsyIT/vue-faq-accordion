@@ -150,12 +150,20 @@
 
       },
       makeActiveCategory (category) {
+        // category clicked is active, show its accordion
         if (this.activeTab === category) { 
           this.showAccordion = false
           this.activeTab = ''
           return
-        }
-        return this.toggleAccordion(category) 
+        } 
+        // if category clicked not active (another one is active and showing its accordion), 
+        // unshow other accordion and toggle to show this category accordion
+        else { //( this.activeTab !== category) 
+          this.showAccordion = false
+          this.toggleAccordion(category)
+          return
+        } 
+        
       },
       generateCategoryClasses (category) {
         return [
@@ -209,14 +217,15 @@
     }
 
     &__nav-item {
-      height: 60px;
+      height: 40px;
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       border-right: 2px solid var(--border-color);
       cursor: pointer;
-      font-weight: 600;
+      font-size: .8em;
+      font-weight: 400;
       transition: all 0.3s;
       text-align: center;
       user-select: none;
@@ -272,7 +281,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 25px;
+      padding: 15px;
       cursor: pointer;
       transition: all 0.3s;
       color: var(--font-color);
@@ -294,12 +303,14 @@
 
       &-text {
         margin-right: 10px;
+        font-size: .9rem;
       }
     }
 
     &__value {
       padding: 0 25px 25px 25px;
       text-align: left;
+      font-size: .8rem;
       color: var(--font-color);
     }
 
