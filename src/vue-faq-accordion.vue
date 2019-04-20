@@ -212,6 +212,7 @@
     &__nav {
       display: flex;
       justify-content: space-between;
+      border: 2px solid #9E9E9E;
       border: 2px solid var(--border-color);
       border-radius: 5px;
     }
@@ -222,6 +223,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border-right: 2px solid #9e9e9e;
       border-right: 2px solid var(--border-color);
       cursor: pointer;
       font-size: .8em;
@@ -232,10 +234,12 @@
       color: var(--font-color);
 
       &_active {
+        color: #D50000;
         color: var(--active-color);
       }
 
       &:hover {
+        color: #D50000;
         color: var(--active-color);
       }
 
@@ -265,11 +269,13 @@
   }
 
   .accordion {
+    border: 2px solid #9e9e9e;
     border: 2px solid var(--border-color);
     border-radius: 5px;
     margin-top: 15px;
 
     &__item {
+      border-bottom: 2px solid #9e9e9e;
       border-bottom: 2px solid var(--border-color);
 
       &:last-child {
@@ -291,11 +297,13 @@
       }
 
       &:hover {
+        color: #D50000;
         color: var(--active-color);
 
         .accordion__toggle-button {
           &::before,
           &::after {
+            background: #D50000;
             background: var(--active-color);
           }
         }
@@ -343,6 +351,7 @@
 
         &::before,
         &::after {
+          background: #D50000;
           background: var(--active-color);
         }
       }
