@@ -213,7 +213,7 @@
       display: flex;
       justify-content: space-between;
       border: 2px solid #9E9E9E;
-      border: 2px solid var(--border-color);
+      // border: 2px solid var(--border-color);
       border-radius: 5px;
     }
 
@@ -224,23 +224,24 @@
       justify-content: center;
       align-items: center;
       border-right: 2px solid #9e9e9e;
-      border-right: 2px solid var(--border-color);
+      // border-right: 2px solid var(--border-color);
       cursor: pointer;
       font-size: .8em;
       font-weight: 400;
       transition: all 0.3s;
       text-align: center;
       user-select: none;
-      color: var(--font-color);
+      color: #000000;
+      // color: var(--font-color);
 
       &_active {
         color: #D50000;
-        color: var(--active-color);
+        // color: var(--active-color);
       }
 
       &:hover {
         color: #D50000;
-        color: var(--active-color);
+        // color: var(--active-color);
       }
 
       &:last-child {
@@ -270,13 +271,13 @@
 
   .accordion {
     border: 2px solid #9e9e9e;
-    border: 2px solid var(--border-color);
+    // border: 2px solid var(--border-color);
     border-radius: 5px;
     margin-top: 15px;
 
     &__item {
       border-bottom: 2px solid #9e9e9e;
-      border-bottom: 2px solid var(--border-color);
+      // border-bottom: 2px solid var(--border-color);
 
       &:last-child {
         border-bottom: none;
@@ -293,18 +294,19 @@
       color: var(--font-color);
 
       &_active {
-        color: var(--active-color);
+        color: #D50000;
+        // color: var(--active-color);
       }
 
       &:hover {
         color: #D50000;
-        color: var(--active-color);
+        // color: var(--active-color);
 
         .accordion__toggle-button {
           &::before,
           &::after {
             background: #D50000;
-            background: var(--active-color);
+            // background: var(--active-color);
           }
         }
       }
@@ -319,7 +321,8 @@
       padding: 0 25px 25px 25px;
       text-align: left;
       font-size: .8rem;
-      color: var(--font-color);
+      color: #000000;
+      // color: var(--font-color);
     }
 
     &__toggle-button {
@@ -352,7 +355,7 @@
         &::before,
         &::after {
           background: #D50000;
-          background: var(--active-color);
+          // background: var(--active-color);
         }
       }
     }
