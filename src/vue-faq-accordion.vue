@@ -212,7 +212,7 @@
     &__nav {
       display: flex;
       justify-content: space-between;
-      border: 2px solid #9E9E9E;
+      // border: 2px solid #9E9E9E;
       // border: 2px solid var(--border-color);
       border-radius: 5px;
     }
@@ -223,7 +223,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-right: 2px solid #9e9e9e;
+      // border-right: 2px solid #9e9e9e;
       // border-right: 2px solid var(--border-color);
       cursor: pointer;
       font-size: .8em;
